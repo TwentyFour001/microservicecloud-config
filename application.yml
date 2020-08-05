@@ -8,9 +8,4 @@ spring:
   application: 
     name: microservicecloud-config-client-dev
  
-spring: 
-  profiles: test #测试环境
-  application: 
-    name: microservicecloud-config-client-test
-
-
+ 
