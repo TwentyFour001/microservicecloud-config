@@ -1,4 +1,4 @@
-spring: 
+spring:  
   profiles: 
     active: 
     - dev
@@ -7,7 +7,7 @@ spring:
 spring: 
   profiles: dev #开发环境
   application: 
-    name: microservicecloud-config-client-dev
+    name: microservicecloud-config-client-dev11
 
 
 -- 
