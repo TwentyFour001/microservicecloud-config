@@ -1,11 +1,50 @@
-spring: 
-  profiles: 
-    active: 
-    - dev
- 
-spring: 
-  profiles: dev #开发环境
-  application: 
-    name: microservicecloud-config-client-dev
- 
- 
+spring:
+  profiles:
+    active: prd
+
+---
+#开发环境配置-------------------------
+server:
+  port: 8081
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kyx?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+#------------------
+
+
+
+
+---
+#测试环境配置
+server:
+  port: 8082
+
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kyx?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+#------------------
+
+
+---
+#生产环境
+server:
+  port: 8083
+
+spring:
+  profiles: prd
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kyx?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+
+#------------------
