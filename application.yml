@@ -16,6 +16,13 @@ spring:
     url: jdbc:mysql://localhost:3306/kyx?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: root
+
+eureka:
+  profiles: dev
+  client:  #客户端注册进eureka服务列表内
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
 #------------------
 
 
@@ -36,6 +43,7 @@ spring:
     username: root
     password: root
 eureka:
+  profiles: test
   client:  #客户端注册进eureka服务列表内
     service-url:
       #defaultZone: http://localhost:7001/eureka
